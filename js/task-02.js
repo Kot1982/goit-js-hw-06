@@ -1,46 +1,11 @@
-// Напиши скрипт, який для кожного елемента масиву ingredients:
+const ingredients = ["Potatoes", "Mushrooms", "Garlic", "Tomatos", "Herbs", "Condiments"];
 
-// Створить окремий елемент <li>. Обов'язково використовуй метод document.createElement().
-// Додасть назву інгредієнта як його текстовий вміст.
-// Додасть елементу клас item.
-// Після чого, вставить усі <li> за одну операцію у список ul.ingredients.
+const listIngredients = document.querySelector("#ingredients");
 
-const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-];
+console.log(listIngredients);
 
-// const listIngredients = document.querySelector('#ingredients');
-// console.log(listIngredients);
-
-// for (let element of ingredients) {
-//   const listItem = document.createElement('li');
-// listItem.className = 'item';
-// const itemTitle = document.createElement('p');
-// itemTitle.textContent = `${element}`;
-// listItem.append(itemTitle);
-// listIngredients.append(listItem);
-// }
-
-
-function test() {
-  
-const listIngredients = document.querySelector('#ingredients');
-// console.log(listIngredients);
-
-for (let element of ingredients) {
-  const listItem = document.createElement('li');
-listItem.className = 'item';
-const itemTitle = document.createElement('p');
-itemTitle.textContent = `${element}`;
-listItem.append(itemTitle);
-listIngredients.append(listItem);
-}
-  return listIngredients;
-}
-
-console.log(test(ingredients))
+const newElement = ingredients.forEach(el => {
+	const element = document.createElement("li");
+	element.textContent = el;
+	listIngredients.append(element);
+});
