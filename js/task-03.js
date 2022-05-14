@@ -14,10 +14,10 @@ const images = [
 ];
 
 const listGallery = document.querySelector(".gallery");
-
+const createItems = images.map(({url, alt}) => `<li> <img src = ${url} alt = "${alt}" width=50% /> </li>`).join("");
 listGallery.insertAdjacentHTML(
 	"afterbegin",
-	images.map(image => `<li> <img src = ${image.url} alt = ${image.alt} width = 50%></li>`).join(""),
+	createItems,
 );
 console.log(listGallery);
 

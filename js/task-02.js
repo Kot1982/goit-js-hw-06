@@ -4,8 +4,12 @@ const listIngredients = document.querySelector("#ingredients");
 
 console.log(listIngredients);
 
-const newElement = ingredients.forEach(el => {
+function createListItem () {
+	const newElement = ingredients.map(el => {
 	const element = document.createElement("li");
 	element.textContent = el;
-	listIngredients.append(element);
+	return element;
 });
+	listIngredients.append(...newElement);
+}
+createListItem();
