@@ -12,7 +12,6 @@ function onBlurInput(event) {
 	}
 }
 function onFocusInput() {
-	inputEl.classList.remove("invalid");
-	inputEl.value = "";
-
+	inputEl.classList.remove("invalid", "valid");
+	// inputEl.value = "";
 }
